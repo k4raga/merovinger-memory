@@ -1,0 +1,28 @@
+{
+  "upstream_revision": "940f06679346315a29db1f6112f50b761cdc41db",
+  "snapshot_date": "2026-11-17",
+  "public_distribution": "merovinger-memory",
+  "import_paths_preserved": true,
+  "sources": [
+    {
+      "path": "src/agent_native_memory/__init__.py",
+      "sha256": "673b5db386dc1b7b25464027747a6084b131b5869f0840d907c22efd6eae267a"
+    },
+    {
+      "path": "src/agent_native_memory/_planner.py",
+      "sha256": "ec120ee338313983311266357166de9910c8acc9c95ffa844351f24664d3b1b9"
+    },
+    {
+      "path": "src/agent_native_memory/_values.py",
+      "sha256": "af350c9befc9b9ca8251dffdfb9e0ec02265638a0cdccc93aef66c29334061a9"
+    },
+    {
+      "path": "src/agent_native_memory/_window.py",
+      "sha256": "982cee2610d16daa3b7b06d6fb8802bb4d915b90253ae6f557a6c18677acd06c"
+    },
+    {
+      "path": "src/agent_native_memory/conversation.py",
+      "sha256": "90af6fe4cc750b21203ca3e354f7e5177488264f03d47274a73844eae59ddeb3"
+    }
+  ]
+}

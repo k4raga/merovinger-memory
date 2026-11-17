@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling==1.33.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "merovinger-memory"
+version = "0.1.0a1"
+description = "Bounded conversation history with explicit compaction and restorable state"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+authors = [{name = "k4raga"}]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/k4raga/merovinger-memory"
+Issues = "https://github.com/k4raga/merovinger-memory/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_native_memory"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

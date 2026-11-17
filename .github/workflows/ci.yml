@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Install build and test tools
+        run: python -m pip install build pytest
+      - name: Build wheel
+        run: python -m build --wheel
+      - name: Install this wheel
+        run: python -m pip install --no-index --find-links dist merovinger-memory==0.1.0a1
+      - name: Test installed package
+        run: python -I -B -m pytest -q tests
+      - name: Checkpoint and fresh-process restore
+        shell: python
+        run: |
+          from pathlib import Path
+          import subprocess
+          import sys
+          output = Path('.runtime/example').resolve()
+          output.mkdir(parents=True, exist_ok=True)
+          script = str(Path('examples/checkpoint.py').resolve())
+          for mode, name in [('--smoke', 'create'), ('--restore-smoke', 'restore')]:
+              subprocess.run([sys.executable, '-I', '-B', script, mode,
+                              '--report', str(output / (name + '.json')),
+                              '--checkpoint', str(output / 'chat.json')], check=True)
