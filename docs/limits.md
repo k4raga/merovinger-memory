@@ -1,3 +1,5 @@
+**English** · [Русский](limits.ru.md)
+
 # Limits and trust
 
 - **Bounded, not infinite history.** Summary publication does not delete the original history. Group, entry, payload, summary and attempt limits remain in force; overflow fails rather than silently dropping source history.

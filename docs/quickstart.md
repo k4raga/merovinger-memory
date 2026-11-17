@@ -1,3 +1,5 @@
+**English** · [Русский](quickstart.ru.md)
+
 # Quickstart
 
 Use Python 3.13. Clone `https://github.com/k4raga/merovinger-memory`, create and activate a virtual environment, then run:

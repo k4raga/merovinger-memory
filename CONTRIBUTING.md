@@ -1,3 +1,5 @@
+**English** · [Русский](CONTRIBUTING.ru.md)
+
 # Contributing
 
 Merovinger Memory is alpha. Keep changes small and include a synthetic reproducer.

@@ -1,3 +1,5 @@
+**English** · [Русский](verification.ru.md)
+
 # Verification
 
 The repository contains independent tests for the public text-history facade and lower-level values, coverage, applicability and counting behavior. They use synthetic data and require no model, UI, database or account.
@@ -24,3 +26,10 @@ These checks do not establish provider token accuracy, durable exactly-once beha
 On 2026-11-17, a fresh Ubuntu Python 3.13 environment built and installed this repository's wheel: **128 tests passed** (116 lower-level cases, 11 facade cases and one distribution check). Both fresh-process checkpoint commands passed, and both README Python examples ran against the installed package. No model, UI or database was used.
 
 Windows CI is configured but is not claimed as passed by this local run. Check Actions for an actual result after publication. These counts describe this source version, not a performance benchmark or production guarantee.
+
+## Recorded public CI
+
+[Run 44055929711](https://github.com/k4raga/merovinger-memory/actions/runs/44055929711)
+at source revision b65b0be succeeded on **Ubuntu and Windows**: wheel build/install,
+tests and fresh-process checkpoint/restore. For later changes, inspect the current
+[Actions runs](https://github.com/k4raga/merovinger-memory/actions).

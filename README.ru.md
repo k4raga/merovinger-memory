@@ -1,4 +1,6 @@
-![Merovinger Memory](docs/assets/hero.svg)
+[English](README.md) · **Русский**
+
+![Merovinger Memory](docs/assets/hero.ru.svg)
 
 # Merovinger Memory
 
@@ -8,7 +10,7 @@
 
 **Альфа · Python 3.13 · MIT · без runtime-зависимостей**
 
-[English](README.md) · [Быстрый старт](docs/quickstart.md) · [Архитектура](docs/architecture.md) · [Ограничения](docs/limits.md) · [Проверки](docs/verification.md)
+[Быстрый старт](docs/quickstart.ru.md) · [Архитектура](docs/architecture.ru.md) · [Ограничения](docs/limits.ru.md) · [Проверки](docs/verification.ru.md)
 
 ## Установка
 
@@ -47,7 +49,7 @@ assert restored.export_state() == checkpoint
 
 ## Механика
 
-![История, контекст и явное сжатие](docs/assets/mechanics.svg)
+![История, контекст и явное сжатие](docs/assets/mechanics.ru.svg)
 
 1. Добавляйте текстовые обмены со стабильными ID. Открытые группы защищены.
 2. Подготавливайте контекст из целых групп. Обязательные данные не обрезаются молча.
@@ -57,7 +59,7 @@ assert restored.export_state() == checkpoint
 
 Сжатие не удаляет исходную историю и не создаёт бесконечное хранилище. Если обязательные данные не помещаются, возвращается `cannot_fit`.
 
-![Рабочий контекст](docs/assets/context.svg)
+![Рабочий контекст](docs/assets/context.ru.svg)
 
 Библиотека не вызывает модель. Summarizer, сериализация, persistence и подключение провайдера остаются у приложения. Неизвестный исход сохраняется и не запускает фоновый повтор.
 
@@ -70,7 +72,7 @@ python -I -B examples/checkpoint.py --smoke --report /absolute/create.json --che
 python -I -B examples/checkpoint.py --restore-smoke --report /absolute/restore.json --checkpoint /absolute/chat.json
 ```
 
-Пути вывода должны быть абсолютными для вашей ОС; [команды Windows](docs/quickstart.md#checkpoint-example). Результат записывается как `PASS`/`FAIL`, код завершения соответствует ему.
+Пути вывода должны быть абсолютными для вашей ОС; [команды Windows](docs/quickstart.ru.md#пример-сохранения). Результат записывается как `PASS`/`FAIL`, код завершения соответствует ему.
 
 ## Границы
 
@@ -78,6 +80,6 @@ python -I -B examples/checkpoint.py --restore-smoke --report /absolute/restore.j
 
 Нет RAG, embeddings, tokenizer, provider adapters, фонового inference, собственной БД, durable exactly-once и универсальной поддержки параллельных tool calls. Summary — недоверенные данные, а не инструкции или разрешение на действие.
 
-API и формат checkpoint находятся в альфе. [Ограничения](docs/limits.md) и [проверки](docs/verification.md) описывают точные границы.
+API и формат checkpoint находятся в альфе. [Ограничения](docs/limits.ru.md) и [проверки](docs/verification.ru.md) описывают точные границы.
 
-[Участие в разработке](CONTRIBUTING.md) · [Изменения](CHANGELOG.md) · [Лицензия MIT](LICENSE)
+[Участие в разработке](CONTRIBUTING.ru.md) · [Изменения](CHANGELOG.ru.md) · [Лицензия MIT](LICENSE)

@@ -1,3 +1,5 @@
+**English** · [Русский](README.ru.md)
+
 ![Merovinger Memory](docs/assets/hero.svg)
 
 # Merovinger Memory
@@ -8,7 +10,7 @@ A small Python library for applications that own their chat history and choose w
 
 **Alpha · Python 3.13 · MIT · zero runtime dependencies**
 
-[Русский](README.ru.md) · [Quickstart](docs/quickstart.md) · [Architecture](docs/architecture.md) · [Limits](docs/limits.md) · [Verification](docs/verification.md)
+[Quickstart](docs/quickstart.md) · [Architecture](docs/architecture.md) · [Limits](docs/limits.md) · [Verification](docs/verification.md)
 
 ## Install
 
